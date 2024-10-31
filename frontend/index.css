@@ -1,0 +1,114 @@
+:root {
+    --primary-blue: #1e88e5;
+    --secondary-blue: #64b5f6;
+    --dark-blue: #0d47a1;
+    --light-blue: #bbdefb;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+.toolbar {
+    background-color: white;
+    border-right: 1px solid #dee2e6;
+    height: 100vh;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.component-list {
+    margin-top: 20px;
+}
+
+.component {
+    background-color: var(--light-blue);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: move;
+    transition: background-color 0.3s;
+}
+
+.component:hover {
+    background-color: var(--secondary-blue);
+    color: white;
+}
+
+.canvas-area {
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.canvas {
+    background-color: white;
+    min-height: 80vh;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+}
+
+.canvas-element {
+    position: relative;
+    padding: 10px;
+    margin: 5px;
+    border: 1px dashed transparent;
+    cursor: pointer;
+}
+
+.canvas-element:hover {
+    border-color: var(--primary-blue);
+}
+
+.canvas-element.selected {
+    border-color: var(--primary-blue);
+    background-color: rgba(30, 136, 229, 0.1);
+}
+
+.properties-panel {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.canvas-toolbar {
+    margin-bottom: 20px;
+}
+
+.canvas-toolbar button {
+    margin-right: 10px;
+}
+
+.loading-spinner {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.loading-spinner.active {
+    display: block;
+}
+
+.property-input {
+    margin-bottom: 10px;
+}
+
+.property-input label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--dark-blue);
+}
+
+.property-input input,
+.property-input select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid var(--secondary-blue);
+    border-radius: 3px;
+}

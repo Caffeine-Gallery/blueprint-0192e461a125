@@ -1,0 +1,24 @@
+type StyleProperties = 
+ record {
+   backgroundColor: text;
+   color: text;
+   fontSize: text;
+   padding: text;
+ };
+type Component = 
+ record {
+   content: text;
+   id: text;
+   styles: StyleProperties;
+   "type": text;
+   x: float64;
+   y: float64;
+ };
+service : {
+  addComponent: (Component) -> ();
+  deleteComponent: (text) -> ();
+  getComponent: (text) -> (opt Component) query;
+  loadLayout: () -> (vec Component) query;
+  saveLayout: (vec Component) -> ();
+  updateComponent: (Component) -> ();
+}
